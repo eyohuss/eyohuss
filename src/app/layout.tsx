@@ -6,8 +6,8 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { CommandPalette } from "@/components/search/command-palette";
 
 export const metadata: Metadata = {
-  title: "EYOHUSS",
-  description: "Hybrid media, literature, art, football, news, and affiliate commerce super-app.",
+  title: "EYOHUSS — Culture, media, and commerce",
+  description: "Discover the latest EYOHUSS media, literature, art, football, news, and creator commerce in one connected platform.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

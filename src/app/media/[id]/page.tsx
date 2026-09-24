@@ -35,8 +35,13 @@ export default async function MediaDetailPage({ params }: { params: Promise<{ id
             </div>
             <div className="flex flex-wrap gap-3">
               <StreamPlayer title={movie.title} />
-              <Button variant="secondary" className="gap-2">
-                <Download className="h-4 w-4" /> Optimized Download
+              <Button variant="secondary" className="gap-2" asChild>
+                <a
+                  href={`data:text/plain;charset=utf-8,${encodeURIComponent(`${movie.title}\n\n${movie.synopsis}\n\nDirector: ${movie.director}\nYear: ${movie.year}\nRuntime: ${movie.duration}`)}`}
+                  download={`${movie.id}-eyohuss.txt`}
+                >
+                  <Download className="h-4 w-4" /> Download item
+                </a>
               </Button>
             </div>
             <p className="text-muted-foreground">{movie.description}</p>

@@ -141,4 +141,3 @@ export const smmOrders: SMMOrder[] = [
   { id: "s2", service: "Boost reel reach", quantity: 25000, total: 310.75, status: "processing", createdAt: "2026-09-17T08:30:00Z" },
 ];
 
-export { featureCards, heroStatCards, feedItems };

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import { ArrowRight, Play, TrendingUp } from "lucide-react";
-import { $featureCards, $feedItems, $heroStatCards } from "@/lib/data";
+import { featureCards, feedItems, heroStatCards } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -31,7 +31,7 @@ export default function HomePage() {
               </Button>
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
-              {$heroStatCards.map((item) => (
+              {heroStatCards.map((item) => (
                 <Card key={item.label} className="p-4">
                   <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{item.label}</p>
                   <p className="mt-2 text-2xl font-bold">{item.value}</p>
@@ -77,7 +77,7 @@ export default function HomePage() {
 
         <Suspense fallback={<div className="h-64 animate-pulse rounded-2xl bg-muted" />}>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {$featureCards.map((item) => (
+            {featureCards.map((item) => (
               <Card key={item.id} className="overflow-hidden border-border/80">
                 <div className="relative h-40 w-full">
                   <Image src={item.image} alt={item.title} fill className="object-cover" />
@@ -106,7 +106,7 @@ export default function HomePage() {
             <Badge className="bg-emerald-500/10 text-emerald-400">Updated 12s ago</Badge>
           </div>
           <div className="space-y-4">
-            {$feedItems.map((item) => (
+            {feedItems.map((item) => (
               <div key={item.id} className="flex items-start gap-4 rounded-2xl border border-border p-3">
                 <div className="relative h-16 w-16 overflow-hidden rounded-xl">
                   <Image src={item.image} alt={item.title} fill className="object-cover" />

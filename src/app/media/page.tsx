@@ -36,7 +36,7 @@ export default function MediaPage() {
               </div>
               <div>
                 <h2 className="text-lg font-semibold">{movie.title}</h2>
-                <p className="text-sm text-muted-foreground">{movie.meta}</p>
+                <p className="text-sm text-muted-foreground">{movie.description}</p>
               </div>
               <div className="flex items-center justify-between text-sm">
                 <span>{movie.year}</span>

@@ -22,7 +22,10 @@ export function AppShell({ children }: Readonly<{ children: React.ReactNode }>) 
   return (
     <div className="min-h-screen bg-background">
       <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-border bg-background/90 p-5 backdrop-blur md:flex">
-        <Link href="/" className="mb-10 text-2xl font-black tracking-tight">EYOHUSS<span className="text-primary">.</span></Link>
+        <div className="mb-10 space-y-3">
+          <Link href="/" className="block text-2xl font-black tracking-tight">EYOHUSS<span className="text-primary">.</span></Link>
+          <a href="https://eyohuss.store" target="_blank" rel="noreferrer" className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground hover:text-primary">Visit eyohuss.store</a>
+        </div>
         <nav className="space-y-1">
           {links.map(({ href, label, icon: Icon }) => <Link key={href} href={href} className={`flex items-center gap-3 rounded-xl px-3 py-3 text-sm ${pathname === href ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}><Icon className="h-4 w-4" />{label}</Link>)}
         </nav>
